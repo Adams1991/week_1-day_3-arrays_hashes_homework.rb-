@@ -133,7 +133,8 @@ users = {
 #
 # # #4. Get the type of Avril's pet Monty
 #
-# p users["Avril"][:pets]{}
+
+p users["Avril"][:pets][0][:species]
 
 #
 # # #5. Get the smallest of Erik's lottery numbers
@@ -196,31 +197,34 @@ united_kingdom = [
     capital: "London"
   }
 ]
-#
+
 # # Complete these tasks:
 #
 # #1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
 
-united_kingdom[1][:capital] = "Cardiff"
-p united_kingdom[1]
-
-# #2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
+# united_kingdom[1][:capital] = "Cardiff"
+# p united_kingdom[1]
 #
-united_kingdom[3] = {
-  name: "Northern Ireland",
-  population: 1811000,
-  capital: "Belfast"
-}
-p united_kingdom
-
-# #3. Use a loop to print the names of all the countries in the UK.
-for country in united_kingdom
-  p country[:name]
-end
-# #4. Use a loop to find the total population of the UK.
+# # #2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
+# #
+# united_kingdom[3] = {
+#   name: "Northern Ireland",
+#   population: 1811000,
+#   capital: "Belfast"
+# }
+# p united_kingdom
+#
+# # #3. Use a loop to print the names of all the countries in the UK.
 # for country in united_kingdom
-#   p country[:population.]
+#   p country[:name]
 # end
+# #4. Use a loop to find the total population of the UK.
+total_population = 0
+for country in united_kingdom
+  total_population += country[:population]
+end
+
+p total_population
 
 # Add CommentCollapse 
 # Message Input
