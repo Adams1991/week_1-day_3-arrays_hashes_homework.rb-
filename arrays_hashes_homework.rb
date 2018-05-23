@@ -2,58 +2,58 @@
 
 # Given the following data structure:
 
-# stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
 # #
 # # # Complete these tasks:
 # #
 # # #1. Add `"Edinburgh Waverley"` to the end of the array
 # #
-# p stops.push("Edinburgh Waverley")
+p stops.push("Edinburgh Waverley")
 #
 # # #
 # # # # #2. Add `"Glasgow Queen St"` to the start of the array
 # # #
-# p stops.unshift("Glasgow Queen St")
+p stops.unshift("Glasgow Queen St")
 #
 # # #
 # # # # #3. Add `"Polmont"` at the appropriate point (between `"Falkirk High"` and `"Linlithgow"`)
 # # #
-# p stops.insert(4, "Polmont")
+p stops.insert(4, "Polmont")
 #
 #
 # # # #4. Work out the index position of `"Linlithgow"`
 #
-# p stops.index("Linlithgow") # answer will include above changes if not commented out or put in function
+p stops.index("Linlithgow")
 #
 # # # #5. Remove `"Livingston"` from the array using its name
 # # #
-# p stops.delete("Livingston")
-# p stops
+p stops.delete("Livingston")
+p stops
 #
 #
 # # #6. Delete `"Cumbernauld"` from the array by index
 # #
-# p stops.delete_at(1)
+p stops.delete_at(1)
 #
 #
 # # #7. How many stops there are in the array?
 #
-# p stops.length() # answer will include above changes if not commented out or put in function
+p stops.length()
 # # #8. How many ways can we return `"Falkirk High"` from the array?
 #
-# p stops[2]
-# p stops.fetch(2)
-# p stops.delete_at(2)
+p stops[2]
+p stops.fetch(2)
+p stops.delete_at(2)
 #
 # # #9. Reverse the positions of the stops in the array
 #
-# p stops.reverse()
+p stops.reverse()
 #
 # # #10. Print out all the stops using a for loop
-# # stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
-# for stop in stops
-#   p stop
-# end
+# stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Haymarket" ]
+for stop in stops
+  p stop
+end
 
 
 #
@@ -119,17 +119,17 @@ users = {
 #
 # # Complete these tasks:
 #
-# #1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
+ # #1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 
-# p users["Jonathan"][:home_town]
+p users["Jonathan"][:home_town]
 # #
 # # # #2. Get Erik's hometown
 # #
-# p users["Erik"][:home_town]
+p users["Erik"][:home_town]
 # #
 # # # #3. Get the array of Erik's lottery numbers
 # #
-# p users["Erik"][:lottery_numbers]
+p users["Erik"][:lottery_numbers]
 #
 # # #4. Get the type of Avril's pet Monty
 #
@@ -139,40 +139,40 @@ p users["Avril"][:pets][0][:species]
 #
 # # #5. Get the smallest of Erik's lottery numbers
 #
-# p users["Erik"][:lottery_numbers].min
+p users["Erik"][:lottery_numbers].min
 # #
 # # # #6. Return an array of Avril's lottery numbers that are even
 # #
-# p users["Avril"][:lottery_numbers].select(&:even?)
+p users["Avril"][:lottery_numbers].select(&:even?)
 #
 # # #7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 #
-# p users["Erik"][:lottery_numbers] << 7
+p users["Erik"][:lottery_numbers] << 7
 #
 # # #8. Change Erik's hometown to Edinburgh
 #
-# p users["Erik"][:home_town] =  "Edinburgh"
-# p users["Erik"]
+p users["Erik"][:home_town] =  "Edinburgh"
+p users["Erik"]
 #
 # # #9. Add a pet dog to Erik called "Fluffy"
 #
-# users["Erik"][:pets] <<  {:name => "Fluffy", :species => "dog"}
-# p users["Erik"][:pets]
+users["Erik"][:pets] <<  {:name => "Fluffy", :species => "dog"}
+p users["Erik"][:pets]
 
 
 # #10. Add another person to the users hash
 
-# users["Shaun"] = {
-#   :twitter => "blabla123",
-#   :lottery_numbers => [12, 14, 53, 38, 8, 25],
-#   :home_town => "Cowdenbeath",
-#   :pets => [
-#     {
-#       :name => "max",
-#       :species => "dog"
-#     }
-#   ]
-# }
+users["Shaun"] = {
+  :twitter => "blabla123",
+  :lottery_numbers => [12, 14, 53, 38, 8, 25],
+  :home_town => "Cowdenbeath",
+  :pets => [
+    {
+      :name => "max",
+      :species => "dog"
+    }
+  ]
+}
 
 #
 #
@@ -202,22 +202,22 @@ united_kingdom = [
 #
 # #1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
 
-# united_kingdom[1][:capital] = "Cardiff"
-# p united_kingdom[1]
+united_kingdom[1][:capital] = "Cardiff"
+p united_kingdom[1]
 #
 # # #2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
 # #
-# united_kingdom[3] = {
-#   name: "Northern Ireland",
-#   population: 1811000,
-#   capital: "Belfast"
-# }
-# p united_kingdom
+united_kingdom[3] = {
+  name: "Northern Ireland",
+  population: 1811000,
+  capital: "Belfast"
+}
+p united_kingdom
 #
 # # #3. Use a loop to print the names of all the countries in the UK.
-# for country in united_kingdom
-#   p country[:name]
-# end
+for country in united_kingdom
+  p country[:name]
+end
 # #4. Use a loop to find the total population of the UK.
 total_population = 0
 for country in united_kingdom
