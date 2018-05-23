@@ -121,45 +121,57 @@ users = {
 #
 # #1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 
-p users["Jonathan"][:home_town]
+# p users["Jonathan"][:home_town]
+# #
+# # # #2. Get Erik's hometown
+# #
+# p users["Erik"][:home_town]
+# #
+# # # #3. Get the array of Erik's lottery numbers
+# #
+# p users["Erik"][:lottery_numbers]
 #
-# # #2. Get Erik's hometown
+# # #4. Get the type of Avril's pet Monty
 #
-p users["Erik"][:home_town]
+# p users["Avril"][:pets]{}
+
 #
-# # #3. Get the array of Erik's lottery numbers
+# # #5. Get the smallest of Erik's lottery numbers
 #
-p users["Erik"][:lottery_numbers]
-
-# #4. Get the type of Avril's pet Monty
-
-# p users["Avril"][:pets][:species] NEEDS FIXED
-
-# #5. Get the smallest of Erik's lottery numbers
-
-p users["Erik"][:lottery_numbers].min
+# p users["Erik"][:lottery_numbers].min
+# #
+# # # #6. Return an array of Avril's lottery numbers that are even
+# #
+# p users["Avril"][:lottery_numbers].select(&:even?)
 #
-# # #6. Return an array of Avril's lottery numbers that are even
+# # #7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 #
-p users["Avril"][:lottery_numbers].select(&:even?)
-
-# #7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
-
-p users["Erik"][:lottery_numbers] << 7
-
-# #8. Change Erik's hometown to Edinburgh
-
-p users["Erik"][:home_town] =  "Edinburgh"
-p users["Erik"]
-
-# #9. Add a pet dog to Erik called "Fluffy"
-
-users["Erik"][:pets] <<  {:name => "Fluffy", :species => "dog"}
-p users["Erik"][:pets]
+# p users["Erik"][:lottery_numbers] << 7
+#
+# # #8. Change Erik's hometown to Edinburgh
+#
+# p users["Erik"][:home_town] =  "Edinburgh"
+# p users["Erik"]
+#
+# # #9. Add a pet dog to Erik called "Fluffy"
+#
+# users["Erik"][:pets] <<  {:name => "Fluffy", :species => "dog"}
+# p users["Erik"][:pets]
 
 
 # #10. Add another person to the users hash
 
+users["Shaun"] = {
+  :twitter => "blabla123",
+  :lottery_numbers => [12, 14, 53, 38, 8, 25],
+  :home_town => "Cowdenbeath",
+  :pets => [
+    {
+      :name => "max",
+      :species => "dog"
+    }
+  ]
+}
 
 #
 #
@@ -167,27 +179,30 @@ p users["Erik"][:pets]
 #
 # # Given the following data structure:
 #
-# united_kingdom = [
-#   {
-#     name: "Scotland",
-#     population: 5295000,
-#     capital: "Edinburgh"
-#   },
-#   {
-#     name: "Wales",
-#     population: 3063000,
-#     capital: "Swansea"
-#   },
-#   {
-#     name: "England",
-#     population: 53010000,
-#     capital: "London"
-#   }
-# ]
+united_kingdom = [
+  {
+    name: "Scotland",
+    population: 5295000,
+    capital: "Edinburgh"
+  },
+  {
+    name: "Wales",
+    population: 3063000,
+    capital: "Swansea"
+  },
+  {
+    name: "England",
+    population: 53010000,
+    capital: "London"
+  }
+]
 #
 # # Complete these tasks:
 #
 # #1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
+
+
+
 # #2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
 # #3. Use a loop to print the names of all the countries in the UK.
 # #4. Use a loop to find the total population of the UK.
