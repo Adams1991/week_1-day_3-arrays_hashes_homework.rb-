@@ -9,10 +9,10 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 # # #1. Add `"Edinburgh Waverley"` to the end of the array
 # #
 p stops.push("Edinburgh Waverley")
-#
-# # #
-# # # # #2. Add `"Glasgow Queen St"` to the start of the array
-# # #
+# #
+# # # #
+# # # # # #2. Add `"Glasgow Queen St"` to the start of the array
+# # # #
 p stops.unshift("Glasgow Queen St")
 #
 # # #
@@ -24,7 +24,7 @@ p stops.insert(4, "Polmont")
 # # # #4. Work out the index position of `"Linlithgow"`
 #
 p stops.index("Linlithgow")
-#
+# #
 # # # #5. Remove `"Livingston"` from the array using its name
 # # #
 p stops.delete("Livingston")
@@ -121,7 +121,7 @@ users = {
 #
  # #1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 
-p users["Jonathan"][:home_town]
+p users["Jonathan"][:twitter]
 # #
 # # # #2. Get Erik's hometown
 # #
